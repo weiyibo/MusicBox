@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -21,13 +22,13 @@ public class HomeController {
 		return "index";
 	}
 	
-	@RequestMapping("/productList")
+	@RequestMapping(value="/productList", method=RequestMethod.POST,headers="Accept=application/json")
 	public @ResponseBody List<Product> productList(){
 		System.out.println("productList");
 		
 		List<Product> products = productDao.getProductList();
 		
-		System.out.println(products.get(0).getProductName());
+		
 		
 		return products;
 	}
