@@ -30,7 +30,10 @@
                   </ul>
                 </li>
                 
-               	<li  style="float:right" ng-click="login()"><a href="">login</a></li>
+               	
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+              	<li  style="float:right" ng-click="login()"><a href="">login</a></li>
                 <li  style="float:right"><a href="#register">register</a></li>
               </ul>
             </div>
